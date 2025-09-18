@@ -316,8 +316,7 @@ header{
     .banner-item{
         background-image:none;
     }
-
-    .banner-item-title{
+    .banner-item-title{ 
         max-width: 100%;
     }
     .banner-item-subtitle{

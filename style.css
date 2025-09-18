@@ -137,13 +137,13 @@ header{
 }
 
 .banner-item{
-    background-image: url(./img/banners/banner_main.jpg);
+    background-image: url(./img/banners/banner_back.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center right;
-    background-size: 100%;
     padding: 68px;
-
+    border-radius: 10px;
+    background-color: #FFF1B8;
 }
 
 .banner-item-title{
@@ -210,7 +210,8 @@ header{
     flex-wrap: wrap;
     margin-top: 44px;
     margin-bottom: 90px;
-    gap: 24px;
+    row-gap: 30px;
+    column-gap: 24px;
 }
 
 .products-card{
@@ -229,14 +230,17 @@ header{
     width: 100%;
 }
 
-.products-card-image{
-    padding: 20px 24px 34px 24px;
+.products-card-description{
+    margin: 24px 20px 24px 35px;
 }
-
 .products-card-description-row{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;     
+}
+
+.products-card-description-row:not(:last-child){
+    margin-bottom: 10px;
 }
 
 .products-card-description-title{
@@ -248,7 +252,71 @@ header{
 
 }
 
-@media (max-width: 991px) {
+.products-card-badge{
+    color:#FFF;
+    background-color: #000;
+    font-size: 12px;
+    font-weight: 400;   
+    line-height: 20px;
+    border-radius: 2px;
+    padding: 1px 8px;
+    align-items:center;
+}
+
+.products-card-description-row-info{
+    display: flex;
+    margin-top: 10px;
+}
+
+.products-card-description-info{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.products-card-price{
+    color: #8C8C8C;
+    font-size: 18px;
+    font-weight: 400;   
+    line-height: 32px;
+}
+
+.products-card-group{
+    color: #8C8C8C;
+    font-size: 18px;
+    font-weight: 400;   
+    line-height: 32px;
+    position: relative;
+}
+
+.products-card-group::before{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color:#8C8C8C;
+    position: absolute;
+    left: -14px;
+    top: 14px;
+}
+
+.products-card-rating{
+    color:#FFC107;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+
+}
+
+
+
+@media (max-width: 993px) {
+    .banner-item{
+        background-image:none;
+    }
+
     .banner-item-title{
         max-width: 100%;
     }
@@ -256,7 +324,7 @@ header{
         max-width: 100%;
     }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 .products-card{
     width: 100%;
 }
